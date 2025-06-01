@@ -1,20 +1,27 @@
-import * as React from "react"
+// Import React và type cho props
+import * as React from "react";
+// Import hàm tiện ích `cn` để nối classNames có điều kiện
+import { cn } from "@/lib/utils";
 
-import { cn } from "@/lib/utils"
-
+/**
+ * Component Card gốc, dùng để bao bọc toàn bộ nội dung của card.
+ */
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      data-slot="card"
+      data-slot="card" // Định danh thẻ card cho styling có điều kiện
       className={cn(
         "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
         className
       )}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * Phần Header của Card, thường dùng để chứa tiêu đề và mô tả.
+ */
 function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -25,9 +32,12 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
       )}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * Tiêu đề của card, thường được đặt trong `CardHeader`.
+ */
 function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -35,9 +45,12 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("leading-none font-semibold", className)}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * Mô tả phụ bên dưới tiêu đề, nằm trong `CardHeader`.
+ */
 function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -45,9 +58,12 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * Vùng chứa các hành động (nút, icon...) thường nằm ở góc trên bên phải card.
+ */
 function CardAction({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -58,9 +74,12 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
       )}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * Vùng nội dung chính của card, thường chứa text, form, hoặc các component khác.
+ */
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -68,9 +87,12 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("px-6", className)}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * Footer của card — thường chứa các nút hành động hoặc thông tin phụ.
+ */
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -78,9 +100,10 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
       {...props}
     />
-  )
+  );
 }
 
+// Xuất tất cả các component con để sử dụng ngoài component Card
 export {
   Card,
   CardHeader,
@@ -89,4 +112,5 @@ export {
   CardAction,
   CardDescription,
   CardContent,
-}
+};
+
