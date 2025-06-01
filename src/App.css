@@ -16,7 +16,7 @@ hhh
 
 /* Hiệu ứng khi hover vào logo */
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa); /* Đổ bóng sáng màu xanh */
+  filter: drop-shadow(0 0 2em #646cffaa); /* Đổ bóng sáng màu xanh nhat */
 }
 
 /* Hiệu ứng khi hover vào logo React */
