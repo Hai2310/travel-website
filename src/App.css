@@ -1,42 +1,52 @@
+/* Phần định dạng chính cho toàn bộ nội dung */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1280px;         /* Giới hạn chiều rộng tối đa */
+  margin: 0 auto;            /* Căn giữa nội dung theo chiều ngang */
+  padding: 2rem;             /* Khoảng cách bên trong phần tử */
+  text-align: center;        /* Căn giữa văn bản */
 }
-
+hhh
+/* Định dạng logo chung */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 6em;               /* Chiều cao của logo */
+  padding: 1.5em;            /* Khoảng cách bên trong logo */
+  will-change: filter;       /* Tối ưu hoá hiệu suất cho hiệu ứng filter */
+  transition: filter 300ms;  /* Hiệu ứng chuyển đổi filter trong 300ms */
 }
 
+/* Hiệu ứng khi hover vào logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Đổ bóng sáng màu xanh */
+}
+
+/* Hiệu ứng khi hover vào logo React */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Đổ bóng sáng màu đặc trưng React */
+}
+
+/* Tạo animation quay tròn cho logo */
 @keyframes logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg);   /* Bắt đầu từ góc quay 0 độ */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Quay tròn đến 360 độ */
   }
 }
 
+/* Áp dụng animation khi người dùng không bật chế độ hạn chế chuyển động */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin infinite 20s linear; /* Quay vô hạn trong 20s theo đường thẳng đều */
   }
 }
 
+/* Định dạng khối thẻ nội dung */
 .card {
-  padding: 2em;
+  padding: 2em; /* Khoảng cách bên trong khối thẻ */
 }
 
+/* Định dạng cho đoạn văn bản hướng dẫn */
 .read-the-docs {
-  color: #888;
+  color: #888; /* Màu chữ xám nhạt */
 }
